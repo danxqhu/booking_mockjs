@@ -6,29 +6,6 @@ var users = appData.users;
 var cities = appData.cities;
 // var countByType = appData.countByType;
 
-var countByType = [
-  {
-    type: 'hotel',
-    count: 0,
-  },
-  {
-    type: 'apartments',
-    count: 0,
-  },
-  {
-    type: 'resorts',
-    count: 0,
-  },
-  {
-    type: 'villas',
-    count: 0,
-  },
-  {
-    type: 'cabins',
-    count: 0,
-  },
-];
-
 Mock.mock('/api/hotels', (req, res) => {
   // console.debug(hotels);
   return {
@@ -46,6 +23,29 @@ Mock.mock('/hotels/countByType', (req, res) => {
   // console.log(req.url, hotels);
   // Calculate every type of hotels (hotelCount,apartmentCount,resortCount,villaCount,cabinCount)
 
+  const countByType = [
+    {
+      type: 'hotel',
+      count: 0,
+    },
+    {
+      type: 'apartments',
+      count: 0,
+    },
+    {
+      type: 'resorts',
+      count: 0,
+    },
+    {
+      type: 'villas',
+      count: 0,
+    },
+    {
+      type: 'cabins',
+      count: 0,
+    },
+  ];
+
   hotels.map((element, index) => {
     // 如果hotels里面的type等于countByType的type，则加1
 
@@ -57,7 +57,7 @@ Mock.mock('/hotels/countByType', (req, res) => {
       // console.log(item);
     });
   });
-  console.log(countByType);
+  // console.log(countByType);
   return {
     errno: 0,
     data: countByType,
