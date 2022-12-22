@@ -1,0 +1,264 @@
+{
+  "hotels": [
+    {
+      "_id": { "$oid": "631aa9a366f9a272e5cf339a" },
+      "name": "Awesome Hotel Updated",
+      "type": "hotel",
+      "city": "Berlin",
+      "address": "somewhere",
+      "distance": "500",
+      "photos": [""],
+      "title": "Best Hotel in the City",
+      "desc": "hotel description",
+      "rating": null,
+      "rooms": ["638456b56e02377183c059fb", "638456c46e02377183c05a00", "638456cf6e02377183c05a05"],
+      "cheapestPrice": { "$numberInt": "100" },
+      "featured": true,
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "635b9fa2ea81a94dcac8848f" },
+      "name": "Hotel Jane 1",
+      "type": "hotel",
+      "city": "Madrid",
+      "address": "somewhere",
+      "distance": "500",
+      "photos": [""],
+      "title": "Best Hotel in the City",
+      "desc": "hotel description",
+      "rating": null,
+      "rooms": ["", "63996de5cc9a7d4834b61a61"],
+      "cheapestPrice": { "$numberInt": "200" },
+      "featured": true,
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "635b9fd5ea81a94dcac88491" },
+      "name": "Hotel Jane 2",
+      "type": "hotel",
+      "city": "Madrid",
+      "address": "somewhere",
+      "distance": "500",
+      "photos": [""],
+      "title": "Best Hotel in the City",
+      "desc": "hotel description",
+      "rating": null,
+      "rooms": [""],
+      "cheapestPrice": { "$numberInt": "300" },
+      "featured": true,
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "635b9fd9ea81a94dcac88493" },
+      "name": "Hotel Jane 3",
+      "type": "hotel",
+      "city": "Madrid",
+      "address": "somewhere",
+      "distance": "500",
+      "photos": [""],
+      "title": "Best Hotel in the City",
+      "desc": "hotel description",
+      "rating": null,
+      "rooms": [""],
+      "cheapestPrice": { "$numberInt": "100" },
+      "featured": false,
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6398470178596bab381b4c3e" },
+      "name": "asd",
+      "type": "hotel",
+      "city": "asd",
+      "address": "asd",
+      "distance": "asd",
+      "photos": [],
+      "title": "asd",
+      "desc": "asd",
+      "rooms": ["638456b56e02377183c059fb", "638456c46e02377183c05a00"],
+      "cheapestPrice": { "$numberInt": "122" },
+      "featured": false,
+      "__v": { "$numberInt": "0" }
+    }
+  ],
+  "rooms": [
+    {
+      "_id": { "$oid": "638456b56e02377183c059fb" },
+      "title": "King Room",
+      "price": { "$numberInt": "100" },
+      "maxPeople": { "$numberInt": "2" },
+      "desc": "King size bed, 1 bathroom, balcony",
+      "roomNumbers": [
+        {
+          "number": { "$numberInt": "101" },
+          "unavailableDates": [
+            { "$date": { "$numberLong": "1669615232668" } },
+            { "$date": { "$numberLong": "1669615232668" } },
+            { "$date": { "$numberLong": "1669651200000" } },
+            { "$date": { "$numberLong": "1669737600000" } }
+          ],
+          "_id": { "$oid": "638456b56e02377183c059fc" }
+        },
+        { "number": { "$numberInt": "102" }, "unavailableDates": [], "_id": { "$oid": "638456b56e02377183c059fd" } }
+      ],
+      "createdAt": { "$date": { "$numberLong": "1669617333277" } },
+      "updatedAt": { "$date": { "$numberLong": "1669693125526" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "638456c46e02377183c05a00" },
+      "title": "2 Bed Room",
+      "price": { "$numberInt": "100" },
+      "maxPeople": { "$numberInt": "2" },
+      "desc": "King size bed, 1 bathroom, balcony",
+      "roomNumbers": [
+        { "number": { "$numberInt": "201" }, "unavailableDates": [], "_id": { "$oid": "638456c46e02377183c05a01" } },
+        {
+          "number": { "$numberInt": "202" },
+          "unavailableDates": [{ "$date": { "$numberLong": "1669651200000" } }, { "$date": { "$numberLong": "1669737600000" } }],
+          "_id": { "$oid": "638456c46e02377183c05a02" }
+        }
+      ],
+      "createdAt": { "$date": { "$numberLong": "1669617348582" } },
+      "updatedAt": { "$date": { "$numberLong": "1669693206181" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "638456cf6e02377183c05a05" },
+      "title": "Another Room",
+      "price": { "$numberInt": "100" },
+      "maxPeople": { "$numberInt": "2" },
+      "desc": "King size bed, 1 bathroom, balcony",
+      "roomNumbers": [
+        {
+          "number": { "$numberInt": "301" },
+          "unavailableDates": [{ "$date": { "$numberLong": "1669651200000" } }, { "$date": { "$numberLong": "1669737600000" } }],
+          "_id": { "$oid": "638456cf6e02377183c05a06" }
+        },
+        { "number": { "$numberInt": "302" }, "unavailableDates": [], "_id": { "$oid": "638456cf6e02377183c05a07" } }
+      ],
+      "createdAt": { "$date": { "$numberLong": "1669617359432" } },
+      "updatedAt": { "$date": { "$numberLong": "1669693303728" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "63996dbfcc9a7d4834b61a5c" },
+      "title": "new room",
+      "price": { "$numberInt": "45" },
+      "maxPeople": { "$numberInt": "2" },
+      "desc": "awesome room",
+      "roomNumbers": [
+        { "number": { "$numberInt": "1" }, "unavailableDates": [], "_id": { "$oid": "63996dbfcc9a7d4834b61a5d" } },
+        { "number": { "$numberInt": "2" }, "unavailableDates": [], "_id": { "$oid": "63996dbfcc9a7d4834b61a5e" } },
+        { "number": { "$numberInt": "3" }, "unavailableDates": [], "_id": { "$oid": "63996dbfcc9a7d4834b61a5f" } }
+      ],
+      "createdAt": { "$date": { "$numberLong": "1670999487721" } },
+      "updatedAt": { "$date": { "$numberLong": "1670999487721" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "63996de5cc9a7d4834b61a61" },
+      "title": "new room",
+      "price": { "$numberInt": "45" },
+      "maxPeople": { "$numberInt": "2" },
+      "desc": "awesome room",
+      "roomNumbers": [
+        { "number": { "$numberInt": "1" }, "unavailableDates": [], "_id": { "$oid": "63996de5cc9a7d4834b61a62" } },
+        { "number": { "$numberInt": "2" }, "unavailableDates": [], "_id": { "$oid": "63996de5cc9a7d4834b61a63" } },
+        { "number": { "$numberInt": "3" }, "unavailableDates": [], "_id": { "$oid": "63996de5cc9a7d4834b61a64" } }
+      ],
+      "createdAt": { "$date": { "$numberLong": "1670999525229" } },
+      "updatedAt": { "$date": { "$numberLong": "1670999525229" } },
+      "__v": { "$numberInt": "0" }
+    }
+  ],
+  "users": [
+    {
+      "_id": { "$oid": "63248a7707f3ecf4cc55f455" },
+      "username": "johnupdated",
+      "email": "john1@gmail.com",
+      "password": "$2a$10$Kp14VtVk.4.fzTzCJKc8ruW28w0VHT890ca5/TriwxUH/4v/UvaTO",
+      "isAdmin": true,
+      "createdAt": { "$date": { "$numberLong": "1663339127783" } },
+      "updatedAt": { "$date": { "$numberLong": "1663595341219" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6392f6a9ea3de8d6fa5cc87e" },
+      "username": "John3",
+      "email": "john3@gmail.com",
+      "country": "USA",
+      "city": "New York",
+      "phone": "+12345678",
+      "password": "$2a$10$e5kFaed/7CTpsxA1i8Oro.TS25.jJP5.AQZwudlkChDmYzuKklx3S",
+      "isAdmin": false,
+      "createdAt": { "$date": { "$numberLong": "1670575785958" } },
+      "updatedAt": { "$date": { "$numberLong": "1670575785958" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6392f91fea3de8d6fa5cc880" },
+      "username": "John4",
+      "email": "john4@gmail.com",
+      "country": "USA",
+      "img": "https://images.pexels.com/photos/11781395/pexels-photo-11781395.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "city": "New York",
+      "phone": "+12345678",
+      "password": "$2a$10$X0fiOh0d/yJmRcA9zS0ChuiIJyPURGKm1Mm9ZNuN/kbUjX6c.AUEK",
+      "isAdmin": false,
+      "createdAt": { "$date": { "$numberLong": "1670576415014" } },
+      "updatedAt": { "$date": { "$numberLong": "1670576415014" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "6392f92dea3de8d6fa5cc882" },
+      "username": "John5",
+      "email": "john5@gmail.com",
+      "country": "USA",
+      "img": "https://images.pexels.com/photos/11781395/pexels-photo-11781395.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      "city": "New York",
+      "phone": "+12345678",
+      "password": "$2a$10$O/mvHKTNb3DycYtLS8mmfu9GliQLcgH1CFywckJQcKbxHvHRLwd42",
+      "isAdmin": false,
+      "createdAt": { "$date": { "$numberLong": "1670576429957" } },
+      "updatedAt": { "$date": { "$numberLong": "1670576429957" } },
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "63981e347c2603776f74f3b7" },
+      "username": "jane",
+      "email": "jane@gmail.com",
+      "country": "USA",
+      "img": "http://res.cloudinary.com/xinqiangdev/image/upload/v1670913587/upload/iyvqyomsvw2dwblz5j5k.png",
+      "city": "NY",
+      "phone": "45678",
+      "password": "$2a$10$wOKGw1U3I09pmqAGzbmBCO982pl0FPCM0sN0Rekxkgfh6QXNiP4za",
+      "isAdmin": false,
+      "createdAt": { "$date": { "$numberLong": "1670913588592" } },
+      "updatedAt": { "$date": { "$numberLong": "1670913588592" } },
+      "__v": { "$numberInt": "0" }
+    }
+  ],
+  "cities": [10, 23, 34],
+  "countByType": [
+    {
+      "type": "hotel",
+      "count": 5
+    },
+    {
+      "type": "apartments",
+      "count": 0
+    },
+    {
+      "type": "resorts",
+      "count": 0
+    },
+    {
+      "type": "villas",
+      "count": 0
+    },
+    {
+      "type": "cabins",
+      "count": 0
+    }
+  ]
+}

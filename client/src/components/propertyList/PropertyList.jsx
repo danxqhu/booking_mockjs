@@ -11,6 +11,7 @@ export default function PropertyList() {
     'https://r-xx.bstatic.com/xdata/images/hotel/300x240/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o=',
     'https://r-xx.bstatic.com/xdata/images/hotel/300x240/52979454.jpeg?k=6ac6d0afd28e4ce00a8f817cc3045039e064469a3f9a88059706c0b45adf2e7d&o=',
   ];
+  // console.log('data', data);
   // console.log('Loading', loading);
   return (
     <div className="pList">

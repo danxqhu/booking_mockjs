@@ -4,7 +4,7 @@ import './featured.scss';
 
 export default function Featured() {
   const { data, loading, error } = useFetch('/hotels/countByCity?cities=Berlin,Madrid,London');
-  // console.log(data);
+  // console.log(data, loading);
   return (
     <div className="featured">
       {loading ? (
