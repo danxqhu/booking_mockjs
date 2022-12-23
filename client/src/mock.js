@@ -20,9 +20,7 @@ Mock.mock('/api/hotels/:id', (req, res) => {
   };
 });
 Mock.mock('/hotels/countByType', (req, res) => {
-  // console.log(req.url, hotels);
   // Calculate every type of hotels (hotelCount,apartmentCount,resortCount,villaCount,cabinCount)
-
   const countByType = [
     {
       type: 'hotel',
@@ -48,16 +46,20 @@ Mock.mock('/hotels/countByType', (req, res) => {
 
   hotels.map((element, index) => {
     // 如果hotels里面的type等于countByType的type，则加1
-
-    // console.log(element);
     countByType.map(item => {
       if (element.type === item.type) {
         return (item.count += 1);
       }
-      // console.log(item);
+      return {
+        type: element.type,
+        count: item.count,
+      };
     });
+    return element;
   });
+
   // console.log(countByType);
+
   return {
     errno: 0,
     data: countByType,
