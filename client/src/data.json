@@ -1,7 +1,7 @@
 {
   "hotels": [
     {
-      "_id": { "$oid": "631aa9a366f9a272e5cf339a" },
+      "_id": "631aa9a366f9a272e5cf339a",
       "name": "Awesome Hotel Updated",
       "type": "hotel",
       "city": "Berlin",
@@ -12,15 +12,16 @@
       "desc": "hotel description",
       "rating": null,
       "rooms": ["638456b56e02377183c059fb", "638456c46e02377183c05a00", "638456cf6e02377183c05a05"],
-      "cheapestPrice": { "$numberInt": "100" },
+      "cheapestPrice": "100",
       "featured": true,
+      "cityImg": "https://ac-b.static.booking.cn/xdata/images/city/540x270/767068.webp?k=380a8e7bd3e2357a88d863b792668a0dfb0a324c8774aa6fcabd4fd9b645ce45&o=",
       "__v": { "$numberInt": "0" }
     },
     {
-      "_id": { "$oid": "635b9fa2ea81a94dcac8848f" },
+      "_id": "635b9fa2ea81a94dcac8848f",
       "name": "Hotel Jane 1",
       "type": "hotel",
-      "city": "Madrid",
+      "city": "Berlin",
       "address": "somewhere",
       "distance": "500",
       "photos": [""],
@@ -28,12 +29,13 @@
       "desc": "hotel description",
       "rating": null,
       "rooms": ["", "63996de5cc9a7d4834b61a61"],
-      "cheapestPrice": { "$numberInt": "200" },
+      "cheapestPrice": "200",
       "featured": true,
+      "cityImg": "https://ac-b.static.booking.cn/xdata/images/city/540x270/709883.webp?k=077b1a40c6a472de083f3a46c8736101d06c6d03e3e40fb30d2090207288591f&o=",
       "__v": { "$numberInt": "0" }
     },
     {
-      "_id": { "$oid": "635b9fd5ea81a94dcac88491" },
+      "_id": "635b9fd5ea81a94dcac88491",
       "name": "Hotel Jane 2",
       "type": "hotel",
       "city": "Madrid",
@@ -44,12 +46,13 @@
       "desc": "hotel description",
       "rating": null,
       "rooms": [""],
-      "cheapestPrice": { "$numberInt": "300" },
+      "cheapestPrice": "300",
       "featured": true,
+      "cityImg": "https://ac-b.static.booking.cn/xdata/images/city/540x270/709883.webp?k=077b1a40c6a472de083f3a46c8736101d06c6d03e3e40fb30d2090207288591f&o=",
       "__v": { "$numberInt": "0" }
     },
     {
-      "_id": { "$oid": "635b9fd9ea81a94dcac88493" },
+      "_id": "635b9fd9ea81a94dcac88493",
       "name": "Hotel Jane 3",
       "type": "hotel",
       "city": "Madrid",
@@ -60,23 +63,25 @@
       "desc": "hotel description",
       "rating": null,
       "rooms": [""],
-      "cheapestPrice": { "$numberInt": "100" },
+      "cheapestPrice": "100",
       "featured": false,
+      "cityImg": "https://ac-b.static.booking.cn/xdata/images/city/540x270/709883.webp?k=077b1a40c6a472de083f3a46c8736101d06c6d03e3e40fb30d2090207288591f&o=",
       "__v": { "$numberInt": "0" }
     },
     {
-      "_id": { "$oid": "6398470178596bab381b4c3e" },
+      "_id": "6398470178596bab381b4c3e",
       "name": "asd",
       "type": "hotel",
-      "city": "asd",
+      "city": "London",
       "address": "asd",
       "distance": "asd",
       "photos": [],
       "title": "asd",
       "desc": "asd",
       "rooms": ["638456b56e02377183c059fb", "638456c46e02377183c05a00"],
-      "cheapestPrice": { "$numberInt": "122" },
+      "cheapestPrice": "122",
       "featured": false,
+      "cityImg": "https://ac-b.static.booking.cn/xdata/images/city/540x270/667263.webp?k=7940af7db25cc52f2ce378dd0c7bdc089c5aa97a18851e6cb8dd5099a8affabd&o=",
       "__v": { "$numberInt": "0" }
     }
   ],

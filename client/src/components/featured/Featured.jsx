@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch';
 import './featured.scss';
 
 export default function Featured() {
-  const { data, loading, error } = useFetch('/hotels/countByCity?cities=Berlin,Madrid,London');
+  const { data, loading, error } = useFetch('/hotelcount/countByCity?cities=Berlin,Madrid,London');
   // console.log(data, loading);
   return (
     <div className="featured">
@@ -18,7 +18,7 @@ export default function Featured() {
               alt=""
             />
             <div className="featuredTitles">
-              <h1>Shanghai</h1>
+              <h1>Berlin</h1>
               <h2>{data[0]} properties</h2>
             </div>
           </div>
