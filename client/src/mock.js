@@ -103,14 +103,14 @@ Mock.mock(/\/hotellist/, 'get', options => {
   // };
 });
 
-Mock.mock(/\/hotels/, 'get', options => {
+Mock.mock(/\/searchhotels/, 'get', options => {
   // 获取传递的参数pageindex
   const city = getQuery(options.url, 'city');
   // 获取传递的参数pagesize
   const min = getQuery(options.url, 'min');
   const max = getQuery(options.url, 'max');
 
-  // console.log(options, city, min, max); //业务代码省略
+  console.log(options, city, min, max); //业务代码省略
 
   return {
     errno: 0,
