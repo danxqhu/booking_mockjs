@@ -13,10 +13,10 @@ Mock.mock('/api/hotels', (req, res) => {
     data: hotels,
   };
 });
-Mock.mock('/api/hotels/:id', (req, res) => {
+Mock.mock(/\/api\/hoteldetail/, (req, res) => {
   return {
     errno: 0,
-    data: hotels,
+    data: hotels[0],
   };
 });
 Mock.mock('/hotels/countByType', (req, res) => {
