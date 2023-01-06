@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faPlane, faCar, faTaxi, faCalendarDays, faPerson } from '@fortawesome/free-solid-svg-icons';
 import { DateRange } from 'react-date-range';
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './header.scss';
 import 'react-date-range/dist/styles.css'; // main css file
@@ -10,17 +10,34 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import { format } from 'date-fns';
 import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
+import { setSearchInfo, getSearchInfo } from '../../utils/Tool';
 
 export default function Header({ type }) {
   const [destination, setDestination] = useState('');
   const [openDate, setOpenDate] = useState(false);
+
   const [dates, setDates] = useState([
     {
       startDate: new Date(),
-      endDate: new Date(),
+      endDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+      // startDate: format(new Date(), 'MM/dd/yyyy'),
+      // endDate: format(new Date(new Date().setDate(new Date().getDate() + 1)), 'MM/dd/yyyy'),
       key: 'selection',
     },
   ]);
+
+  function formatDates(dates) {
+    let startDate = format(dates[0].startDate, 'MM/dd/yyyy');
+    let endDate = format(dates[0].endDate, 'MM/dd/yyyy');
+    return [
+      {
+        startDate: startDate,
+        endDate: endDate,
+        key: 'selection',
+      },
+    ];
+  }
+
   const [openOptions, setOpenOptions] = useState(false);
   const [options, setOptions] = useState({
     adult: 1,
@@ -41,9 +58,54 @@ export default function Header({ type }) {
 
   const handleSearch = () => {
     dispatch({ type: 'NEW_SEARCH', payload: { destination, dates, options } });
+    // let newDates = formatDates(dates);
+
+    // console.log(new Date());
+    // Fri Jan 06 2023 16:08:48 GMT+0800 (中国标准时间)
+
+    // console.log(format(newDates, 'new Date()'));
+    // console.log(newDates[0]);
+
+    // setSearchInfo({ dates: newDates, destination: destination });
+
+    let newDates = dates;
+
+    // 问题！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+    newDates[0].startDate.toString(); //怎样有效的转成字符串？？？？？
+    // newDates.key = '';
+    console.log(newDates, typeof newDates[0].startDate);
+    setSearchInfo({ dates: dates, destination: destination });
     navigate('/hotels', { state: { destination, dates, options } });
   };
   const { user } = useContext(AuthContext);
+
+  let storedSeachInfo = {};
+
+  useEffect(() => {
+    //如果存在搜索数据，则使用搜索数据
+    function decideDates() {
+      let info = getSearchInfo();
+      if (info) {
+        // storedSeachInfo = info;
+        setDestination(info.destination);
+        // console.log('storedSeachInfo:', storedSeachInfo);
+      }
+    }
+    decideDates();
+  });
+
+  // console.log(JSON.stringify(new Date().toString()));
+  // console.log(typeof new Date());
+
+  useEffect(() => {
+    // console.log('dates:', dates);
+    // setSearchInfo({ dates: dates, destination: destination });
+  }, [dates]);
+
+  const handleInputChange = event => {
+    setDestination(event.target.value);
+  };
+
   return (
     <div className="header">
       <div className={type === 'list' ? 'headerContainer listMode' : 'headerContainer'}>
@@ -82,19 +144,20 @@ export default function Header({ type }) {
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="Where are you going?"
+                  placeholder={destination || 'Where are you going?'}
                   className="headerSearchInput"
-                  onChange={e => {
-                    setDestination(e.target.value);
-                  }}
+                  // onChange={e => {
+                  //   setDestination(e.target.value);
+                  // }}
+                  onChange={handleInputChange}
                 />
               </div>
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-                <span onClick={() => setOpenDate(!openDate)} className="headerSearchText">{`${format(
-                  dates[0].startDate,
-                  'MM/dd/yyyy',
-                )} to ${format(dates[0].endDate, 'MM/dd/yyyy')}`}</span>
+                <span onClick={() => setOpenDate(!openDate)} className="headerSearchText">
+                  {/* {`${dates[0].startDate} to ${dates[0].endDate}`} */}
+                  {`${format(dates[0].startDate, 'MM/dd/yyyy')} to ${format(dates[0].endDate, 'MM/dd/yyyy')}`}
+                </span>
                 {openDate && (
                   <DateRange
                     editableDateInputs={true}

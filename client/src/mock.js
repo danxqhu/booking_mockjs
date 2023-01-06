@@ -110,7 +110,7 @@ Mock.mock(/\/searchhotels/, 'get', options => {
   const min = getQuery(options.url, 'min');
   const max = getQuery(options.url, 'max');
 
-  console.log(options, city, min, max); //业务代码省略
+  // console.log(options, city, min, max); //业务代码省略
 
   return {
     errno: 0,
