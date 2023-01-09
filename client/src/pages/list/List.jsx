@@ -18,7 +18,7 @@ export default function List() {
   const [max, setMax] = useState(undefined);
 
   const { data, loading, error, reFetch } = useFetch(`/searchhotels?city=${destination}&min=${min || 0}&max=${max || 999}`);
-  // console.log(data);
+  // console.log('List dates:', dates);
 
   const handleClick = () => {
     reFetch();

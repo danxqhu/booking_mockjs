@@ -7,10 +7,11 @@ import { useNavigate } from 'react-router-dom';
 import './header.scss';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { format } from 'date-fns';
+import { format, isBefore } from 'date-fns';
 import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
-import { setSearchInfo, getSearchInfo } from '../../utils/Tool';
+import { setSearchInfo, getSearchInfo, timeToString, stringToDate } from '../../utils/Tool';
+import lodash from 'lodash';
 
 export default function Header({ type }) {
   const [destination, setDestination] = useState('');
@@ -60,39 +61,65 @@ export default function Header({ type }) {
     dispatch({ type: 'NEW_SEARCH', payload: { destination, dates, options } });
     // let newDates = formatDates(dates);
 
-    // console.log(new Date());
     // Fri Jan 06 2023 16:08:48 GMT+0800 (中国标准时间)
 
-    // console.log(format(newDates, 'new Date()'));
-    // console.log(newDates[0]);
+    let newDates = lodash.cloneDeep(dates);
+    // console.log(newDates);
+    newDates[0].startDate = timeToString(newDates[0].startDate);
+    newDates[0].endDate = timeToString(newDates[0].endDate);
 
-    // setSearchInfo({ dates: newDates, destination: destination });
+    // newDates[0].startDate = str2;
+    // console.log(typeof str2, str2);
 
-    let newDates = dates;
+    // console.log('stringToDate:', stringToDate(str2, '-'));
 
-    // 问题！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-    newDates[0].startDate.toString(); //怎样有效的转成字符串？？？？？
-    // newDates.key = '';
-    console.log(newDates, typeof newDates[0].startDate);
-    setSearchInfo({ dates: dates, destination: destination });
+    // console.log(newDates, typeof newDates[0].startDate);
+    setSearchInfo({ dates: newDates, destination: destination });
     navigate('/hotels', { state: { destination, dates, options } });
   };
   const { user } = useContext(AuthContext);
 
-  let storedSeachInfo = {};
+  // let storedSeachInfo = {};
+
+  function decideDates() {
+    let info = getSearchInfo();
+    if (info) {
+      // 还需要判断储存的开始日期是否在今天以前，如果是的话需要删除，然后设置默认今天开始的
+
+      // console.log(isBefore())
+      // storedSeachInfo = info;
+      setDestination(info.destination);
+      // 处理info.dates为date对象
+      info.dates[0].startDate = stringToDate(info.dates[0].startDate);
+      info.dates[0].endDate = stringToDate(info.dates[0].endDate);
+      console.log(info.dates[0].startDate);
+      let today = stringToDate(timeToString(new Date()));
+      // let isBeforeToday = false;
+      if (isBefore(info.dates[0].startDate, today)) {
+        // isBeforeToday = true;
+        setDates([
+          {
+            startDate: new Date(),
+            endDate: new Date(new Date().setDate(new Date().getDate() + 1)),
+            key: 'selection',
+          },
+        ]);
+        console.log('dates:', dates);
+        setSearchInfo({});
+      } else {
+        setDates(info.dates);
+      }
+
+      console.log(isBefore(info.dates[0].startDate, today));
+
+      console.log('today:', today);
+    }
+  }
 
   useEffect(() => {
     //如果存在搜索数据，则使用搜索数据
-    function decideDates() {
-      let info = getSearchInfo();
-      if (info) {
-        // storedSeachInfo = info;
-        setDestination(info.destination);
-        // console.log('storedSeachInfo:', storedSeachInfo);
-      }
-    }
     decideDates();
-  });
+  }, []);
 
   // console.log(JSON.stringify(new Date().toString()));
   // console.log(typeof new Date());
