@@ -3,11 +3,12 @@ import './searchItem.scss';
 import { Link } from 'react-router-dom';
 
 export default function SearchItem({ item }) {
+  // console.log('item:', item);
   return (
     <div className="searchItem">
       <img
         // src="https://ac-a.static.booking.cn/xdata/images/hotel/square600/130482272.webp?k=1084c3d7fd22a99700e610cf2d817280377a4bbb94512b8c9663de75c9169487&o=&s=1"
-        src={item.photos[0]}
+        src={item.photos[0]?.src}
         alt=""
         className="siImg"
       />

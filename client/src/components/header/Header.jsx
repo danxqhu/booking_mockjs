@@ -58,7 +58,14 @@ export default function Header({ type }) {
   const { dispatch } = useContext(SearchContext);
 
   const handleSearch = () => {
+    console.log('destination:', destination);
+
+    if (destination === '') {
+      alert('Where are you going?');
+      return;
+    }
     dispatch({ type: 'NEW_SEARCH', payload: { destination, dates, options } });
+
     // let newDates = formatDates(dates);
 
     // Fri Jan 06 2023 16:08:48 GMT+0800 (中国标准时间)
@@ -83,16 +90,17 @@ export default function Header({ type }) {
 
   function decideDates() {
     let info = getSearchInfo();
+    // console.log(info, dates);
     if (info) {
       // 还需要判断储存的开始日期是否在今天以前，如果是的话需要删除，然后设置默认今天开始的
 
-      // console.log(isBefore())
+      // console.log(info);
       // storedSeachInfo = info;
       setDestination(info.destination);
       // 处理info.dates为date对象
       info.dates[0].startDate = stringToDate(info.dates[0].startDate);
       info.dates[0].endDate = stringToDate(info.dates[0].endDate);
-      console.log(info.dates[0].startDate);
+      // console.log(info.dates[0].startDate);
       let today = stringToDate(timeToString(new Date()));
       // let isBeforeToday = false;
       if (isBefore(info.dates[0].startDate, today)) {
@@ -104,15 +112,17 @@ export default function Header({ type }) {
             key: 'selection',
           },
         ]);
-        console.log('dates:', dates);
+        // console.log('dates:', dates);
         setSearchInfo({});
       } else {
         setDates(info.dates);
       }
 
-      console.log(isBefore(info.dates[0].startDate, today));
+      // console.log(isBefore(info.dates[0].startDate, today));
 
-      console.log('today:', today);
+      // console.log('today:', today);
+    } else {
+      // do nothing
     }
   }
 
@@ -165,7 +175,7 @@ export default function Header({ type }) {
             <p className="headerDesc">
               Get rewarded for your travels - unlock instant savings of 10% or more with a free Lamabooking account
             </p>
-            {!user && <button className="headerBtn">Sign in / Register</button>}
+            {!user && <button className="headerBtn">Login / Register</button>}
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />

@@ -50,7 +50,33 @@
       "city": "Berlin",
       "address": "somewhere",
       "distance": "500",
-      "photos": [""],
+      "photos": [
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134688969.jpg?k=c16cd8478f07dd8561b920aab637cf6917c59431261e6581987bd58ca25ab7e1&o=&hp=1",
+          "id": 1
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/133589030.jpg?k=48bbe30f1b71778802c0d3bc0bba2448e210462ff873178d4478eab37336a850&o=&hp=1",
+          "id": 2
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134695912.jpg?k=f16e4b081e33b6f796ea303ad5c6dac159dc2ffd84b37d094c558f2f9adf9bc5&o=&hp=1",
+          "id": 3
+        },
+
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134895026.jpg?k=0358011388c8a88adb653e09294b0a947b5dad60a3c8a0b8fa9f27109740a6eb&o=&hp=1",
+          "id": 4
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/130511682.jpg?k=07a820097808b69c4491e89711c759ade79a65ff39edbe14c2708fbe11986a85&o=&hp=1",
+          "id": 5
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134894574.jpg?k=99ac72ce2944fc72b4f930763fb085373b1b634c34979da27de7a79dc517a078&o=&hp=1",
+          "id": 6
+        }
+      ],
       "title": "Best Hotel in the City",
       "desc": "hotel description",
       "rating": null,
@@ -67,7 +93,33 @@
       "city": "Madrid",
       "address": "somewhere",
       "distance": "500",
-      "photos": [""],
+      "photos": [
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134688969.jpg?k=c16cd8478f07dd8561b920aab637cf6917c59431261e6581987bd58ca25ab7e1&o=&hp=1",
+          "id": 1
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/133589030.jpg?k=48bbe30f1b71778802c0d3bc0bba2448e210462ff873178d4478eab37336a850&o=&hp=1",
+          "id": 2
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134695912.jpg?k=f16e4b081e33b6f796ea303ad5c6dac159dc2ffd84b37d094c558f2f9adf9bc5&o=&hp=1",
+          "id": 3
+        },
+
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134895026.jpg?k=0358011388c8a88adb653e09294b0a947b5dad60a3c8a0b8fa9f27109740a6eb&o=&hp=1",
+          "id": 4
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/130511682.jpg?k=07a820097808b69c4491e89711c759ade79a65ff39edbe14c2708fbe11986a85&o=&hp=1",
+          "id": 5
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134894574.jpg?k=99ac72ce2944fc72b4f930763fb085373b1b634c34979da27de7a79dc517a078&o=&hp=1",
+          "id": 6
+        }
+      ],
       "title": "Best Hotel in the City",
       "desc": "hotel description",
       "rating": null,
@@ -84,7 +136,33 @@
       "city": "Madrid",
       "address": "somewhere",
       "distance": "500",
-      "photos": [""],
+      "photos": [
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134688969.jpg?k=c16cd8478f07dd8561b920aab637cf6917c59431261e6581987bd58ca25ab7e1&o=&hp=1",
+          "id": 1
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/133589030.jpg?k=48bbe30f1b71778802c0d3bc0bba2448e210462ff873178d4478eab37336a850&o=&hp=1",
+          "id": 2
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134695912.jpg?k=f16e4b081e33b6f796ea303ad5c6dac159dc2ffd84b37d094c558f2f9adf9bc5&o=&hp=1",
+          "id": 3
+        },
+
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134895026.jpg?k=0358011388c8a88adb653e09294b0a947b5dad60a3c8a0b8fa9f27109740a6eb&o=&hp=1",
+          "id": 4
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/130511682.jpg?k=07a820097808b69c4491e89711c759ade79a65ff39edbe14c2708fbe11986a85&o=&hp=1",
+          "id": 5
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134894574.jpg?k=99ac72ce2944fc72b4f930763fb085373b1b634c34979da27de7a79dc517a078&o=&hp=1",
+          "id": 6
+        }
+      ],
       "title": "Best Hotel in the City",
       "desc": "hotel description",
       "rating": null,
@@ -101,7 +179,33 @@
       "city": "London",
       "address": "asd",
       "distance": "asd",
-      "photos": [],
+      "photos": [
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134688969.jpg?k=c16cd8478f07dd8561b920aab637cf6917c59431261e6581987bd58ca25ab7e1&o=&hp=1",
+          "id": 1
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/133589030.jpg?k=48bbe30f1b71778802c0d3bc0bba2448e210462ff873178d4478eab37336a850&o=&hp=1",
+          "id": 2
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max500/134695912.jpg?k=f16e4b081e33b6f796ea303ad5c6dac159dc2ffd84b37d094c558f2f9adf9bc5&o=&hp=1",
+          "id": 3
+        },
+
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134895026.jpg?k=0358011388c8a88adb653e09294b0a947b5dad60a3c8a0b8fa9f27109740a6eb&o=&hp=1",
+          "id": 4
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/130511682.jpg?k=07a820097808b69c4491e89711c759ade79a65ff39edbe14c2708fbe11986a85&o=&hp=1",
+          "id": 5
+        },
+        {
+          "src": "https://ac-a.static.booking.cn/xdata/images/hotel/max300/134894574.jpg?k=99ac72ce2944fc72b4f930763fb085373b1b634c34979da27de7a79dc517a078&o=&hp=1",
+          "id": 6
+        }
+      ],
       "title": "asd",
       "desc": "asd",
       "rooms": ["638456b56e02377183c059fb", "638456c46e02377183c05a00"],
