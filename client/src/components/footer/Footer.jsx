@@ -46,7 +46,7 @@ export default function Footer() {
           <li className="fListItem">Hotels</li>
         </ul>
       </div>
-      <div className="fText">Copyright © 2022 Xinbooking.</div>
+      <div className="fText">Copyright © 2023 H-booking.</div>
     </div>
   );
 }

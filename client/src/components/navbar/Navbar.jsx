@@ -14,7 +14,7 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navContainer">
         <Link to="/">
-          <span className="logo">lamabooking</span>
+          <span className="logo">H-booking</span>
         </Link>
 
         {user ? (

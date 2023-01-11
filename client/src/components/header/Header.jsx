@@ -71,16 +71,9 @@ export default function Header({ type }) {
     // Fri Jan 06 2023 16:08:48 GMT+0800 (中国标准时间)
 
     let newDates = lodash.cloneDeep(dates);
-    // console.log(newDates);
     newDates[0].startDate = timeToString(newDates[0].startDate);
     newDates[0].endDate = timeToString(newDates[0].endDate);
 
-    // newDates[0].startDate = str2;
-    // console.log(typeof str2, str2);
-
-    // console.log('stringToDate:', stringToDate(str2, '-'));
-
-    // console.log(newDates, typeof newDates[0].startDate);
     setSearchInfo({ dates: newDates, destination: destination });
     navigate('/hotels', { state: { destination, dates, options } });
   };
@@ -113,7 +106,10 @@ export default function Header({ type }) {
           },
         ]);
         // console.log('dates:', dates);
-        setSearchInfo({});
+        let newDates = lodash.cloneDeep(dates);
+        newDates[0].startDate = timeToString(newDates[0].startDate);
+        newDates[0].endDate = timeToString(newDates[0].endDate);
+        setSearchInfo({ dates: newDates, destination: destination });
       } else {
         setDates(info.dates);
       }
@@ -173,7 +169,7 @@ export default function Header({ type }) {
           <>
             <h1 className="headerTitle">A lifetime of discounts? It's Genius.</h1>
             <p className="headerDesc">
-              Get rewarded for your travels - unlock instant savings of 10% or more with a free Lamabooking account
+              Get rewarded for your travels - unlock instant savings of 10% or more with a free H-booking account
             </p>
             {!user && <button className="headerBtn">Login / Register</button>}
             <div className="headerSearch">
