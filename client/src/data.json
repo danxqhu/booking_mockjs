@@ -2,7 +2,7 @@
   "hotels": [
     {
       "_id": "631aa9a366f9a272e5cf339a",
-      "name": "Awesome Hotel Updated",
+      "name": "Hyatt Place",
       "type": "hotel",
       "city": "Berlin",
       "address": "somewhere",
@@ -35,7 +35,7 @@
         }
       ],
       "title": "Best Hotel in the City",
-      "desc": "hotel description",
+      "desc": "Located in the center of Changning District, Hyatt Place Shanghai Tianshan Plaza features 150 spacious rooms. Loushanguan Road Subway Station is just a 5-minute walk from the hotel. Free WiFi is provided throughout the entire property. Free parking is also possible on site.",
       "rating": null,
       "rooms": ["638456b56e02377183c059fb", "638456c46e02377183c05a00", "638456cf6e02377183c05a05"],
       "cheapestPrice": "100",
