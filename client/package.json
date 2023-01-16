@@ -35,14 +35,12 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "cover 99.5% in CN",
+      "not dead"
     ],
     "development": [
-      "last 2 chrome version",
-      "last 2 firefox version",
-      "last 2 safari version"
+      "cover 99.5% in CN",
+      "not dead"
     ]
   },
   "devDependencies": {

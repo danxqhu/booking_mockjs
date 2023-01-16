@@ -7,8 +7,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['css-loader'],
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          // {
+          //   loader: 'style-loader',
+          // },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [require('postcss-preset-env')],
+              },
+            },
+          },
+        ],
       },
     ],
   },
